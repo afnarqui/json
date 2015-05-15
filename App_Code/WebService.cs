@@ -20,8 +20,10 @@ public class WebService : System.Web.Services.WebService {
     }
 
     [WebMethod]
-    public string HelloWorld() {
-        return "Hola a todos";
+    public List<copia> BuscarDatosCopia() {
+
+        DataClassesDataContext bd = new DataClassesDataContext();
+        return bd.copia.ToList();
     }
     
 }
